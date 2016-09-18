@@ -4,15 +4,15 @@ su = 1
 ma = 0
 real = str(numer)
 for i in range(len(real) - 14):
-    for x in range(i, i + 13):
-        su = su * int(real[(x + i) - 1])
-        print( x + i)
-        time.sleep(.01)
+	for x in range(i, i + 13):
+		su = su * int(real[(x + i) - 1])
+		print( x + i)
+		time.sleep(.01)
 
-    print("got: " + str(su) + ", max is: " + str(ma))
-    print(su)
-    if su > ma:
-        ma = su
-    su = 1
+	print("got: " + str(su) + ", max is: " + str(ma))
+	print(su)
+	if su > ma:
+		ma = su
+	su = 1
 
 print(ma)
