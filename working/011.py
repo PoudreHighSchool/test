@@ -22,23 +22,23 @@ grid_string = '''
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 '''.strip()
 for line in grid_string.splitlines():
-    grid.append([int(number) for number in line.split()])
+	grid.append([int(number) for number in line.split()])
 
 greatest_product = 0
 for y, row in enumerate(grid):
-    for x, col in enumerate(row):
-        for x_dir in range(-1, 2):
-            for y_dir in range(-1, 2):
-                if x_dir == 0 and y_dir == 0: continue
-                product = 1
-                for i in range(4):
-                    x_pos = x + (i * x_dir)
-                    y_pos = y + (i * y_dir)
-                    if (x_pos < 0 or y_pos < 0): break
-                    elif (y_pos >= len(grid) or x_pos >= len(row)): break
-                    product *= grid[y_pos][x_pos]
-                if product > greatest_product:
-                    greatest_product = product
+	for x, col in enumerate(row):
+		for x_dir in range(-1, 2):
+			for y_dir in range(-1, 2):
+				if x_dir == 0 and y_dir == 0: continue
+				product = 1
+				for i in range(4):
+					x_pos = x + (i * x_dir)
+					y_pos = y + (i * y_dir)
+					if (x_pos < 0 or y_pos < 0): break
+					elif (y_pos >= len(grid) or x_pos >= len(row)): break
+					product *= grid[y_pos][x_pos]
+				if product > greatest_product:
+					greatest_product = product
 
 print(greatest_product)
 

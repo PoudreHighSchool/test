@@ -3,7 +3,7 @@ numbers = [37107287533902102798797998220837590246510135740250,463769376774900097
 su = 0
 
 for i in range(0, len(numbers)):
-    su = su + numbers[i]
-    print(su)
+	su = su + numbers[i]
+	print(su)
 
 print(su)
