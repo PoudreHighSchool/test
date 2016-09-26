@@ -10,7 +10,14 @@ def primeFind(number):
 	return True # is prime!
 
 def checkLeft(number):
-	
+	tmp = True
+	for i in range(2, len(number)):
+		number.pop(i)
+		if not primeFind(int(number)):
+			tmp = False
+	return tmp
 
-for i in range(8, 500000):
-	if primeFind(i):
+# for i in range(8, 500000):
+# 	if primeFind(i):
+
+print(checkLeft(str(3797)))
