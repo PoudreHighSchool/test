@@ -11,7 +11,7 @@ def primeFind(number):
 
 def checkLeft(number):
 	tmp = True
-	lit = []
+	lit = [0, 0]
 	for i in range(1, len(str(number))):
 		lit.append(int( (str(number)[-1]) )
 
