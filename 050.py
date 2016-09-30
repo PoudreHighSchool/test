@@ -22,5 +22,3 @@ while su < 99:
 
 print(su)
 print(ma)
-
-#Bleh
